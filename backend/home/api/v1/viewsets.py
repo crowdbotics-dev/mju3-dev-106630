@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Bsd1,Bsd1,Bsd1
-from .serializers import Bsd1Serializer,Bsd1Serializer,Bsd1Serializer
+from home.models import Bsd1,Bsd2,Bsd2,Bsd2
+from .serializers import Bsd1Serializer,Bsd2Serializer,Bsd2Serializer,Bsd2Serializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class Bsd1ViewSet(viewsets.ModelViewSet):
     serializer_class = Bsd1Serializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Bsd1.objects.all()
+
+class Bsd2ViewSet(viewsets.ModelViewSet):
+    serializer_class = Bsd2Serializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Bsd2.objects.all()

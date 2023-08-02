@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Bsd1,Bsd1
+from home.models import Bsd1,Bsd2,Bsd2
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class Bsd1Serializer(serializers.ModelSerializer):
 
     class Meta:
         model = Bsd1
+        fields = "__all__"
+
+class Bsd2Serializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Bsd2
         fields = "__all__"
