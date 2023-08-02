@@ -24,6 +24,24 @@ function api_v1_bsd1_partial_update(payload) {
 function api_v1_bsd1_destroy(payload) {
   return mjudevAPI.delete(`/api/v1/bsd1/${payload.id}/`)
 }
+function api_v1_bsd2_list(payload) {
+  return mjudevAPI.get(`/api/v1/bsd2/`)
+}
+function api_v1_bsd2_create(payload) {
+  return mjudevAPI.post(`/api/v1/bsd2/`, payload)
+}
+function api_v1_bsd2_retrieve(payload) {
+  return mjudevAPI.get(`/api/v1/bsd2/${payload.id}/`)
+}
+function api_v1_bsd2_update(payload) {
+  return mjudevAPI.put(`/api/v1/bsd2/${payload.id}/`, payload)
+}
+function api_v1_bsd2_partial_update(payload) {
+  return mjudevAPI.patch(`/api/v1/bsd2/${payload.id}/`, payload)
+}
+function api_v1_bsd2_destroy(payload) {
+  return mjudevAPI.delete(`/api/v1/bsd2/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return mjudevAPI.post(`/api/v1/login/`, payload)
 }
@@ -71,6 +89,12 @@ export const apiService = {
   api_v1_bsd1_update,
   api_v1_bsd1_partial_update,
   api_v1_bsd1_destroy,
+  api_v1_bsd2_list,
+  api_v1_bsd2_create,
+  api_v1_bsd2_retrieve,
+  api_v1_bsd2_update,
+  api_v1_bsd2_partial_update,
+  api_v1_bsd2_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   rest_auth_login_create,
